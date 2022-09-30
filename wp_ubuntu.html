@@ -1,0 +1,235 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PGZH8HT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Materialize - Compiled and minified CSS-->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
+    />
+    <!-- Font Awesome Icon - CSS-->
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Web Personal</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-126939217-2");
+    </script>
+
+    <!-- Google Site Verification for indexing -->
+    <meta
+      name="google-site-verification"
+      content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84"
+    />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+
+    <!-- Navigation Menu-->
+    <!-- Nav class 1 -->
+    <nav class="hide-on-small-only">
+      <ul class="side-nav fixed section table-of-contents">
+        <li class="logo">
+          <a
+            id="logo-container"
+            aria-label="Navigate to the beginning of the page"
+            href="#intro"
+            class="brand-logo grey-blue-text"
+          >
+            <img
+              src="/assets/img/passport-new.jpg"
+              class="circle img-responsive profile-pic"
+              alt="avatar"
+            />
+          </a>
+        </li>
+
+        <li class="bold">
+          <a
+            aria-label="Navigate to the About section"
+            href="index.html"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-social-person small"></i><span>Home</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about" class="section scrollspy">
+        <h3 class="page-title white-text teal">Tugas</h3>
+        <div class="container flow-text">
+          <h4>Membuat website wordpress dengan database terpisah</h4>
+          <p style="font-size: 20px">
+            <b> Topologi: </b> <br />
+            <img src="/assets/img1/1.png" alt=""/> <br />
+            <b
+              >Alat: <br />
+              virtualBox <br />
+              2 VM ubuntu server yang sudah di setup
+            </b>
+            <br />
+            <br />
+            <b>Langkah-langkah </b> <br />
+            1. Siapkan 2 VM ubuntu server untuk menjadi databases dan webserver
+            <br />
+            <img src="/assets/img1/2.png" alt="" style="width: 1000px ;" /><br />
+            2. Setting ip statis yang menggunakan adapter host-only adapater.
+            Dengan menjalankan comment dibawah: <br />
+            <i> "nano /etc/netplan/00-isntaller-config.yaml"</i> <br />
+            <img src="/assets/img1/3.png" alt="" /> <br />
+            Kemudian jalankan comment ini : <i>sudo netplan apply</i> <br />
+            berfungsi unutk mengecek sintak yang kita buat apakah ada error jika
+            tidak maka akan tampil seprti gambar diatas. <br />
+            Lakukan di kedua VM agar bisa saling terhubung. <br />
+            Dan jangan lupa lakukan update dan upgrade pada kedua VM dengan
+            comment: <br />
+            <i>"sudo apt update"</i> <br />
+            <i>"sudo apt upgrade"</i>
+          </p>
+          <h5>Setup VM web server</h5>
+          <p style="font-size: 20px">
+            Menginstall apache2 di ubuntu server <br />
+            comment <i>"sudo apt install apache2 -y"</i><br />
+            <img src="/assets/img1/4.png" alt="" /><br />
+            Menginstall mysql client <br />
+            comment <i>"sudo apt install mysql-client -y"</i> <br />
+            <img src="/assets/img1/5.png" alt=""><br>
+            Menginstall php dan php-mysql <br />
+            Comment <i>"sudo apt install php php-mysql"</i><br>
+            <img src="/assets/img1/6.png" alt=""/><br>
+            Untuk mengcek apakah service apache2 sudah run apa belum anda bisa menggunakan comment <br>
+            <i>"sudo systemctl status apache2"</i> <br>
+            Dan jika ingin merestart service apache2 anda bisa menggunakan comment. <br>
+            <i>“sudo systemctl restart apache2”</i> <br>
+            Dan unutk mengecek tampilan webnya seperti apa kalian bisa buka di browser dengan mengetikan. <br>
+            <b>http://ip_webserver/</b> <br>
+            Maka akan muncul tampilan seprti ini sebagai default apache2 page <br>
+            <img src="/assets/img1/7.png" alt="" style="width: 1000px ;">
+          </p>
+          <h5>Setup Database Server</h5>
+          <p style="font-size: 20px ;">
+            Menginstall mysql server <br>
+            Comment <i> “sudo apt install mysql-server -y”</i> <br>
+            <img src="/assets/img1/8.png" alt=""> <br>
+            Menginstall php dan php-mysql <br>
+            comment <i>“sudo apt install php php-mysql”</i><br>
+            <img src="/assets/img1/9.png" alt=""> <br>
+            Jika sudah untuk mengecek service mysql anda bisa menggunakan commant. <br>
+            <i>“sudo systemctl status mysql”</i> <br>
+            Dan unutk merestart service anda bisa menggunakan commant. <br>
+            <i>“sudo systemctl restart mysql”</i> <br>
+          </p>
+          <h5>konfigurasi mysql secure</h5>
+          <p style="font-size: 20px ;">
+            sebelum kita konfigurasi mysql secure nya kita harus mengrubah password root dari msyql server terlebih dahulu. Commant: <br>
+            <i>"sudo mysql"</i> <br>
+            <i>“ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY;”</i>
+            <img src="/assets/img1/10.png" alt=""> <br>
+            Jika sudah ketik <i>“exit”</i> Jika sudah ketik “exit” dan kemudian jalankan comment: <br>
+            <i>“mysql_secure_installation”</i> <br>
+             Dan kemudian anda bisa ikutin pada gambar dibawah: <br>
+            <img src="/assets/img1/11.png" alt=""> <br>
+            <img src="/assets/img1/12.png" alt=""> <br>
+            Jika sudah makan kita akan membuat user dan database kemudian memberikan hak akses nya juga Pertama kita harus login terlebih dahulu ke myql nya dengam comment: <br>
+            <i>“ mysql –u root –p ”</i>
+            Jika sudah kita akan membuat user baru dan database untuk kita gunakan kebada web server dan database untuk website kita nanti dan memberi perivilage ke pada user yang akan kita buat nanti ke database untuk website kita nanti. Commant: <br>
+            <i>“CREATE USER ‘user_name’@’ip_webserver’ IDENTIFIED BY ‘passwourd_anda’;” <br>
+            “CREATE DATABASE nama_database;” <br>
+            “GRANT ALL ON nama_database.* TO ‘user_name’@’ip_webserver’“ <br>
+            “FLUSH PRIVILEGES;”
+            </i> <br>
+            <img src="/assets/img1/13.png" alt=""> <br>
+            Selanjutnya kita akan mengkonfigurasi bind-address commant: <br>
+            <i>“sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf“</i> <br>
+            <img src="/assets/img1/14.png" alt="">
+            Jika sudah save file nya dan restart service mysql. <br>
+            Untuk pengecekan apakah sudah terhubung kita bisa mencoba login ke mysql menggunakan user yang telah kita buat sebelumnya di webserver. Commant: <br>
+            <i>“sudo mysql –u user_name –h ip_database -p“</i> <br>
+            <img src="/assets/img1/15.png" alt="">
+          </p>
+          <h5>Menginstall wordpress di webserver</h5>
+          <p style="font-size: 20px ;">
+            Pertama kita harus download file wordpress nya dengan commant: <br>
+            <i>“cd /tmp && wget https://wordpress.org/latest.tar.gz“</i> <br>
+            <img src="/assets/img1/16.png" alt=""><br>
+            Selanjutnya kita extrak file wordpress Commant: <br>
+            <i>“ tar -xvf latest.tar.gz ”</i><br>
+            <img src="/assets/img1/17.png" alt=""> <br>
+            Jika sudah selesai di extrak maka akan muncul folder wordpress di didalam folder /tmp. Selanjutnta kita copy folder wordpress tadi ke folder /var/www/html. Commant: <br>
+            <i>“ sudo cp -R wordpress /var/www/html/ ”</i><br>
+            Kemudian jika sudah maka kita akan mengubah hak pemiliki direktori menjadi www-data:www-data. Commant: <br>
+            <i>“ sudo chown -R www-data:www-data /var/www/html/wordpress/  ”</i> <br>
+            Selanjutnya kita akan mengubah hak akses direktori menjadi 755 yang berarti akses baca dan eksekusi untuk semua orang dan juga akses write untuk pemilik file.  Commant: <br>
+            <i>“ sudo chmod -R 755 /var/www/html/wordpress/ ”</i><br>
+            Kemudian kita akan membuat sebuah direktori uploads di direktori /var/www/html/wordpress/wp_content/. Commant: <br>
+            <i>“ sudo mkdir /var/www/html/wordpress/wp-content/uploads ”</i> <br>
+            Dan juga mengubah hak pemiliik direktori menjadi www-data:www-data. Commant: <br>
+            <i>“ sudo chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads/ ”</i><br>
+            <img src="/assets/img1/18.png" alt=""><br>
+            Jika sudah kita bisa restart service apache2, <br>
+            Untuk pengcekan bisa kita lakukan di browser dengan mengetikan:  <br>
+            <i>“ http://ip_webserver/wordpress ”</i><br>
+            Dan jika berpahasil penginstallannya maka akan muncul tampila seprti ini pada browser anda. <br>
+            <img src="/assets/img1/19.png" alt=""><br>
+            Pilih Bahasa yang akan mau anda gunakan dan klik next <br>
+            Kemudian klik let’s go! <br>
+            Kemudian kita akan di suruh mengisi database, user, password, dan host database, anda bisa mengisikannya susai dengan  database, user dan password yang anda create di mysql server. <br>
+            <img src="/assets/img1/20.png" alt=""><br>
+            Kemudian klik kirim <br>
+            Selanjutnya kita akan arahkan untuk membuat akun untuk login ke wordpress sebagai admin. Anda bisa isi kan sesuai keinginan anda <br>
+            <img src="/assets/img1/21.png" alt="" style="width: 1000px ;"> <br>
+            Kemudian klik Install Wordpress <br>
+            Jika sudah akan muncul tapilan page login. Dan sialahkan anda login dengan akun wordpress yang sudah dibuat sebelumnya. <br>
+            <img src="/assets/img1/22.png" alt=""> <br>
+            Jika anda sudah  login maka akan muncul tampilan seperti ini <br>
+            <img src="/assets/img1/23.png" alt=""style="width: 1000px ;"> <br>
+            Dan selesai proses installasi wordpress di ubuntu server dengan serverweb terpisah dengan databases. <br>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
