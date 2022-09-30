@@ -1,1 +1,137 @@
-hellow word
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Web Personal</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126939217-2');
+  </script>
+
+  <!-- Google Site Verification for indexing -->
+  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    
+    <!-- Navigation Menu-->
+    <!-- Nav class 1 -->
+    <nav class="hide-on-small-only">
+      <ul class="side-nav fixed section table-of-contents">
+  
+        <li class="logo">
+          <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+            class="brand-logo grey-blue-text">
+            <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
+          </a>
+        </li>
+  
+        <li class="bold">
+          <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text"><i
+              class="mdi-social-person small"></i><span>Home</span></a>
+      </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="section scrollspy">
+            <h3 class="page-title white-text teal">Tugas</h3>
+            <div class="container flow-text">       
+                <h4>Install Wordpress Menggunakan xampp</h4>
+                <p style="font-size: 20px ;">
+                    XAMPP, untuk menyediakan PHP environment, web server dan MySQL 
+                    server. Download aplikasi ini di: 
+                    <a href="https://www.apachefriends.org/download.html "><b>https://www.apachefriends.org/download.html</b> </a>. Pada matakuliah ini, kita akan menggunakan PHP versi terbaru yaitu PHP8 sehingga pilih versi XAMPP dengan awalan 8.x saat proses download. Lakukan instalasi hingga selesai.<br>
+                    Setiap memulai proses pengembangan web, pastikan XAMPP pada bagian Apache dan MySQL server telah dijalankan seperti tampilan berikut.
+                </p>
+                <img src="" alt="">
+                <p>
+                    Step 2: install Wordpress
+                </p>
+                <ul style="font-size: 20px ;">
+                    <li>
+                        Download file wordpress pada link berikut: <a href="https://wordpress.org/download/"><b>https://worpress.org/download.</b> </a> 
+                    </li>
+                    <li>
+                        Setelah download selesai, copy file yang telah didownload ke folder htdocs lalu extract file. Hasil ekstrak akan menampilkan satu folder baru dengan nama wordpress.
+                    </li>
+                    <li>
+                        Disini karnan saya sudah pernah mengisntall wordpress. Jadi folder dengan nama wordpress tadi sana rename menjadi wp-1 unutuk membuat akun wordpress dengan database untuk website kita yang lain.
+                    </li>
+                </ul>
+                <img src="" alt="">
+                <p style="font-size: 20px ;">
+                    <i>Secara default, folder htdocs berada di C:\xampp\htdocs.</i><br>
+                    Lakukan installasi dengan mengakses wordpress melalui browser. Pada browser, masukan URL beriku:<br>
+                    <a href="http://localhost/wordpress"><b>http://localhost/wordpress</b></a><br>
+                    Lanjutkan langkah-langkah instalasi wordpress berikut:<br>
+                    Pada halaman utama instalasi pemilihan bahasa, pilih English lalu klik Continue<br>
+                    Pada tahap informasi pembuatan file wp-config seperti gambar dibawah, klik Continue.<br>
+                </p>
+                <img src="" alt="">
+                <p style="font-size: 20px ;">
+                    Pada tahap pengisian konfigurasi databases, isikan dengan data berikut:
+                </p>
+                <img src="" alt="">
+                <p style="font-size: 20px ;">
+                    Pesan error ini dapat terjadi karena database dengan nama wordpress tidak ditemukan. Oleh karena itu, silahkan buat database wordpress dengan bantuan fitur<br>
+                    bawaan XAMPP yaitu PHPMyadmin. Untuk mengakses fitur ini, buka tab baru (jangan tutup tab instalasi), lalu ketikkan: <a href="http://localhost/phpmyadmin"><b>http://localhost/phpmyadmin</b></a> <br>
+                    Setelah tampilan muncul, klik menu Databases lalu isikan nama databases dan klik create.<br>
+                </p>
+                <img src="" alt="">
+                <p style="font-size: 20px ;">
+                    Kembali ke tab instalasi wordpress, klik Try Again lalu isikan kembali konfigurasi database seperti tahap sebelumnya, klik Submit. <br> 
+                    Jika konfigurasi tidak ada masalah, akan muncul tampilan seperti dibawah ini, lalu klik Run Installation
+                </p>
+                <img src="" alt="">
+                <p style="font-size: 20px ;">
+                    <i>Note: untuk pengisisan database bisa disesuaikan dengan nama database yang anda buat, Dikasus ini saya membuat database dengan nama wp-1.
+                    </i> <br>
+                    Lengkapi form informasi yang dibutuhkan lalu klik Install Wordpress. Contoh sebagai berikut: <br>
+                    <img src="" alt=""> <br>
+                    <i>Note: pada bagian site Title itu opsional boleh kalian isi dengan judul projek anda atau juga boleh dikosongkan <br>
+                    Note: pastikan untuk mengingat username dan password yang akan digunakan. Akun ini akan digunakan untuk setiap kali login ke dalam sistem wordpress.
+                    </i> <br>
+                    Jika tidak ada masalah pada pengisian data, maka akan muncul halaman suskes. Klik Login untuk memulai proses manajemen wordpress.
+                    <img src="" alt=""> <br>
+                    Login ke dalam sistem dengan menggunakan username dan password yang sudah diisi pada tahap sebelumnya. Jika akun benar, maka akan muncul halaman dashboard utamawordpress.
+                    <img src="" alt=""> <br>
+                    Ketika sudah login akan muncul tampilan seperti ini dan selesai proses installasi wordpress dan silahkan explore fasilitas apa saja yang di sediakan wordpress unutk memudahkan proses pembuata website anda.
+                    <img src="" alt=""><br>
+                    Untuk melihat hasil web setelah instalasi, ketikkan kembali URL berikut: <b>http://localhost/nama_databses_anda</b> <br>
+                    Contoh: punya saya <b>http://localhost/wp-1</b> <br>
+                    Maka akan keluar tampilan seperti ini:
+                    <img src="" alt=""> <br>
+                    <i> Note: Untuk mengakses kembali halaman untuk login, ketikkan URL berikut: <a href="http://localhost/wordpresswp-admin"><b>http://localhost/wordpress/wp-admin</b></a> </i>
+                    
+
+                </p>
+        </section>
+</body>
