@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Web Personal</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126939217-2');
+  </script>
+
+  <!-- Google Site Verification for indexing -->
+  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    
+    <!-- Navigation Menu-->
+    <!-- Nav class 1 -->
+    <nav class="hide-on-small-only">
+      <ul class="side-nav fixed section table-of-contents">
+        <li class="logo">
+            <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+              class="brand-logo grey-blue-text">
+              <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
+            </a>
+          </li>
+        <li class="bold">
+            <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
+              <i class="mdi-social-person small"></i><span>Home</span>
+            </a>   
+          </li>
+          <li class="bold">
+            <a aria-label="Navigate to the About section" href="https://drive.google.com/file/d/1kVCbSVbP7LkmE2uDuVTNlzQn1-n9NAGr/view?usp=sharing" class="waves-effect waves-dark teal-text">
+              <i class="mdi-av-my-library-books small"></i><span>Laporan</span>
+              </a>
+          </li>
+      </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="section scrollspy">
+            <h3 class="page-title white-text teal">Tugas</h3>
+            <div class="container flow-text">       
+                <h4>Manajemen User dan Hak Akses Database di MySQL</h4>
+                <h5>A. Membuat User Akses</h5>
+                <p style="font-size: 20px ;">
+                    Secara default, jika pertama kali menginstall MySQL maka hanya ada 1 user yaitu ‘root’. User root merupakan pemilik hak tertinggi dalam MySQL. Saran saya jangan menggunakan user root untuk mengoneksikan aplikasi database anda ke MySQL demi Keamanan. Secara umum query untuk membuat user baru adalah: <br>
+                    <b>“ CREATE USER 'namauser'@'host' IDENTIFIED BY 'password'; ”</b> <br>
+                    contoh 1: <br>
+                    <img src="/assets/img2/1.png" alt="">
+                    dari contoh di atas maka si user budi ini hanya bisa melakukan akses ke MySQL dari host dengan IP 192.168.56.11. <br>
+                    contoh 2: <br>
+                    <img src="/assets/img2/2.png" alt=""> <br>
+                    Dari contoh di atas maka si user rini hanyak bisa melakukan koneksi dari host yang sama dengan host MySQLnya. Hal ini cocok dilakukan jika server MySQL dan databasesnysa berada di server yang sama. <br>
+                    contoh 3: <br>
+                    <img src="/assets/img2/3.png" alt=""><br>
+                    Dari contoh di atas maka si user dinda bisa melakukan koneksi dari host manapun atau tidak terbatas ip/host nya. Meskipun dengan % (wild card) host ini tampak fleksibel dalam hal konektivtias, namun juga beresiko karena si user ini bisa akses dari host manapun.
+                </p>
+                <h5>B. Menghapus User</h5>
+                <p style="font-size: 20px ;">
+                    Query untuk menghapus user yang sudah dibuat, printahnya adalah: <br>
+                    <b>“ DROP USER ‘namauser’@’host’; “</b> <br>
+                    contoh: <br>
+                    <img src="/assets/img2/4.png" alt=""> <br>
+                    Printah diatas digunakan untuk menghapus user rini yang mengakses dari localhost. Dan query ini juga bisa digunakan untuk menghapus host yang menggunakan ip dan % (wild card).
+                </p>
+                <h5>C. Memberikan Hak Akses User ke Database Tertentu</h5>
+                <p style="font-size: 20px ;">
+                    Memberi hak akses user ke database tertentu berfungsi supaya user tersebut hanya bisa mengakses databases yang diberikan hak akses dan juga hanya bisa melakukan query tertentu Query SQL secara umum untuk pembatasan hak akses user adalah: <br>
+                    <b>“ GRANT hak1, hak2, ….. on namadatabases.namatabel TO ‘namauser’@’hos’; “</b> <br>
+                    Beberapa macam hak akses yang bisa diberikan kepada user adalah
+                    <ol style="font-size:20px ;">
+                        <li>
+                            SELECT: si user bisa melakukan perintah SELECT
+                        </li>
+                        <li>
+                            INSERT: si user bisa melakukan perintah INSERT untuk menambahrecord
+                        </li>
+                        <li>
+                            UPDATE: si user bisa melakukan perintah UPDATE untuk update record
+                        </li>
+                        <li>
+                            DELETE: si user bisa melakukan perintah DELETE untuk hapus record
+                        </li>
+                        <li>
+                            CREATE: si user bisa melakukan perintah CREATE untuk membuat tabel baru
+                        </li>
+                        <li>
+                            ALTER: si user bisa melakukan perintah ALTER untuk mengubah struktur tabel
+                        </li>
+                        <li>
+                            DROP: si user bisa melakukan perintah DROP untuk menghapus tabel
+                        </li>
+                    </ol>
+                </p>
+                <p style="font-size: 20px ;">
+                    Contoh 1: <br>
+                    <img src="/assets/img2/5.png" alt=""><br>
+                    Contoh di atas berarti memberikan hak akses ke user <i>budi</i> yang mengakses dengan host <i>192.168.56.11</i>  hak akses yang diberikan hanyal select ke database coba dan semua table yang ada didalamnya dimana user hanya bisa menjalankan query select di database <b>coba</b>. <br>
+                    Contoh2: <br>
+                    Dari printah diatas kita juga bisa memberikan hak akses lebih dari 1 ke user <br>
+                    <img src="/assets/img2/6.png" alt=""> <br>
+                    Di contoh di atas saya memberikan hak akses insert dan delete ke user budi tapi hanya di database coba saja dan di semua table yang. Tapi jika anda mau lebih spesifik anda bisa mencantum kan nama table nya sekaligus <br>
+                    Contoh3: <br>
+                    <img src="/assets/img2/7.png" alt=""> <br>
+                    Maksud dari query diatas, adalah memberikan hak akases pada user budi yang mengakases dari host 192.168.56.11 ke database coba. User ini mendapatkan full akses ke databases coba sehingga bisa melakukan semua query <br>
+                    Contoh4: <br>
+                    <img src="/assets/img2/8.png" alt=""> <br>
+                    Maksud dari query di atas adalah memberikan hak akses pada user budi yang mengakses dari host 192.168.56.11 ke semua databases yang ada dengan full akses. <br>
+                    <i> Note: setiap kita memberikan printah GRANT jangan lupa meberikan
+                        perintah query.
+                    </i> <br>
+                    <b>“FLUSH PIVILEGES;“</b> <br>
+                    Query di atas untuk mereload semua privileges di MySQL. Atau bisa juga dengan melakukan restart sevice MySQL <br>
+                    <img src="/assets/img2/9.png" alt="">
+                </p>
+                <h5>D. Mencabut Hak Akses User</h5>
+                <p style="font-size: 20px ;">
+                    Query untuk mencabut hak akses user secara umum adalah: <br>
+                    <b>“REMOKE hak1, hak2, … ON namadatabase.namatable FROM ‘namauser’@’host’ “</b> <br>
+                    contoh1: <br>
+                    <img src="/assets/img2/10.png" alt=""> <br>
+                    Perintah diatas bertujuan untuk mencabut hak akses unutk menjalankan printah SELECT di database coba pada semua tabel dari user budi yang mengakses dari host ‘192.168.56.11’ <br>
+                    Contoh2: <br>
+                    <img src="/assets/img2/11.png" alt=""> <br>
+                    Perintah di atas bertujuan untuk mencabut hak untuk menjalankan perintah SELECT dan DELETE di database cobap ada semua tabel, dari user budi yang mengakses dari host 192.168.56.11. <br>
+                    contoh3: <br>
+                    <img src="/assets/img2/12.png" alt=""><br>
+                    Perintah diatas bertujuan untuk mencabut semua hak akses di di semua database pada semua tabel, dari user budi yang mengakses dari host192.168.56.11’
+
+
+                </p>
+            </div>    
+        </section>
+    </main>        
+</body>

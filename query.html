@@ -47,21 +47,21 @@
     <nav class="hide-on-small-only">
       <ul class="side-nav fixed section table-of-contents">
         <li class="logo">
-          <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-            class="brand-logo grey-blue-text">
-            <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
-          </a>
-        </li>
-        <li class="bold">
-          <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
-            <i class="mdi-social-person small"></i><span>Home</span>
-          </a>   
-        </li>
-        <li class="bold">
-          <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
-            <i class="mdi-av-my-library-books small"></i><span>Laporan</span>
+            <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+              class="brand-logo grey-blue-text">
+              <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
             </a>
-        </li>    
+          </li>
+        <li class="bold">
+            <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
+              <i class="mdi-social-person small"></i><span>Home</span>
+            </a>   
+          </li>
+          <li class="bold">
+            <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
+              <i class="mdi-av-my-library-books small"></i><span>Laporan</span>
+              </a>
+          </li>  
       </ul>
     </nav>
 
@@ -69,12 +69,17 @@
         <section id="about" class="section scrollspy">
             <h3 class="page-title white-text teal">Tugas</h3>
             <div class="container flow-text">       
-                <h4>Install Wordpress Menggunakan xampp</h4>
+                <h4>Jelaskan kegunaan antara union, select, wait dan -- .</h4>
                 <p style="font-size: 20px ;">
-                    XAMPP, untuk menyediakan PHP environment, web server dan MySQL 
-                    server. Download aplikasi ini di: 
-                    <a href="https://www.apachefriends.org/download.html "><b>https://www.apachefriends.org/download.html</b> </a>. Pada matakuliah ini, kita akan menggunakan PHP versi terbaru yaitu PHP8 sehingga pilih versi XAMPP dengan awalan 8.x saat proses download. Lakukan instalasi hingga selesai.<br>
-                    Setiap memulai proses pengembangan web, pastikan XAMPP pada bagian Apache dan MySQL server telah dijalankan seperti tampilan berikut.
+                    select berfungsi untuk memilih data dari database. Data yang dikembalikan disimpan dalam tabel hasil, yang disebut kumpulan hasil. <br>
+                    Union digunakan untuk menghubungkan kumpulan hasil dari beberapa pernyataan select, dan perintah ini menghapus hasil yang sama/berulang/duplikat. <br>
+                    <img src="/assets/img/20.jpg" alt="" width="80%"> <br>
+                    Operator UNIONhanya memilih nilai yang berbeda secara default. Untuk mengizinkan nilai duplikat, gunakan UNION ALL: <br>
+                    <img src="/assets/img/21.jpg" alt="" width="80%"> <br>
+                    Sleep merupakan query menunggu batas waktu berakir. Pada contoh dibawah saya mau menampilkan semua record dari table wp_terms kemudian saya gunakan sleep(5) maka dia akan membutuhkan waktu 25,0562 detik untuk menampilkan semua record. Mengapa 25 detik? Karna time sleep yang saya isi 5 detik di kali banyak jumlah record. <br>
+                    <img src="/assets/img/22.jpg" alt=""> <br>
+                    -- merupakan printah komen dan query ini tidak akan mengasilkan output apa apa karna sistem tidak menggap itu printah <br>
+                    <img src="/assets/img/23.jpg" alt=""> <br>
                 </p>
             </div>  
         </section>
