@@ -58,7 +58,7 @@
           </a>   
         </li>
         <li class="bold">
-          <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
+          <a aria-label="Navigate to the About section" href="https://drive.google.com/file/d/1MFqzka1wqckGzX6ifZkkSywxajfy2GlD/view?usp=sharing" class="waves-effect waves-dark teal-text">
             <i class="mdi-av-my-library-books small"></i><span>Laporan</span>
             </a>
         </li>    
@@ -70,11 +70,27 @@
             <h3 class="page-title white-text teal">Tugas</h3>
             <div class="container flow-text">       
                 <h4>Install Wordpress Menggunakan xampp</h4>
+                <h5>Fundamental Access control</h5>
                 <p style="font-size: 20px ;">
-                    XAMPP, untuk menyediakan PHP environment, web server dan MySQL 
-                    server. Download aplikasi ini di: 
-                    <a href="https://www.apachefriends.org/download.html "><b>https://www.apachefriends.org/download.html</b> </a>. Pada matakuliah ini, kita akan menggunakan PHP versi terbaru yaitu PHP8 sehingga pilih versi XAMPP dengan awalan 8.x saat proses download. Lakukan instalasi hingga selesai.<br>
-                    Setiap memulai proses pengembangan web, pastikan XAMPP pada bagian Apache dan MySQL server telah dijalankan seperti tampilan berikut.
+                  Access control diartikan / diimplementasikan sebagai pemberian izin terhadap sebuah objek tertentu secara spesifik. Akases control sendiri membatasi orang orang yang akan mengakses objek tersebut. Tanpa adanya akses control, kemungkinan sesuatu (termasuk data) dapat di curi lebih meningkat. Dalam keamanan informasi, access control sangat penting untuk memastikan kerahasiaan, integritas, dan ketersediaan. Mengontrol siapa yang memiliki akses ke sistem dan luasnya akses yang dimiliki pengguna sangat penting untuk memastikan keamanan sistem dan data pada sistem. <br>
+                  •	Kontrol akses  adalah fitur keamanan yang mengontrol bagaimana pengguna dan sistem berkomunikasi dan berinteraksi dengan sistem dan sumber daya lain. <br>
+                  •	Akses  adalah aliran informasi antara subjek dan sumber daya. <br>
+                  •	Subjek  adalah entitas  aktif yang meminta akses ke resource atau data di dalam resource. Misalnya: pengguna, program, proses, dll. <br>
+                  •	Resource  adalah entitas yang berisi informasi . Misal: Komputer, Database, File, Program, Printer, dll.
+                  •	Kontrol akses memberi organisasi kemampuan untuk mengontrol, membatasi, memantau, dan melindungi ketersediaan sumber daya, integritas, dan kerahasiaan.
+                  Contoh akses control dalam MySQL yaitu dalam membuatan user kita harus tau dari host mana user itu akan mengakses misalnya dibuat user joko yang mengakses dari host 192.168.10.10 Maka kita akan menggunakan query create user ‘joko’@’192.168.10.10’ identified by ‘pass_joko’;. <br>
+                  Dan juga pemberian hak hak dalam Mysql misalnya kita akan memberi hak select ke user joko maka kita tau bahwa si joko hanya bisa menggunakan query select dan  kita juga bisa membatasi akses ke database mana dan tabel  mana saja yang bisa diakses user joko. <br> 
+                  Contoh query grant select on db1.user to ‘joko’@’192.168.10.10.; . maksud query disamping  yaitu memberikan hak select kepada user joko ke database db1 dan hanya pada table user. <br>
+                </p>
+                <h5>Discretionary Access Control (DAC). </h5>
+                <p style="font-size: 20px;">
+                  Pemilik utama akses dapat menentukan siapa yang dapat mengakses miliknya dan dapat menentukan ijin akses.
+                  Contoh : pada mysql user yang memiliiki kekuasan atau hak layaknya root dapat membuat user dan memberikan hak hak tertentu kepada user yang ada agar tidak dapat merusak atau menggubah isi atau table didalam database yang tidak sesusai dengan hak yang diberikan.
+                </p>
+                <h5>Mandatory Access Control (MAC)</h5>
+                <p style="font-size:20px ;">
+                  Sebuah grup/ organisasi yang memberikan ijin akses berdasarkan spesifik level yang ada untuk klasifikasi informasi/ data. <br>
+                  Contoh: user ‘root’ MySQL dapat memberikan privileges tertentu kepada user lain untuk mengurus database tertentu sesuia dengan job yang diberikan si user ‘root’.
                 </p>
             </div>  
         </section>
