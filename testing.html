@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi Retrospective</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; text-align: center; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #result { display: none; margin-top: 20px; color: red; font-weight: bold; border: 2px solid red; padding: 15px; background: #ffe6e6; }
+        .data-item { color: #333; font-weight: normal; font-size: 0.9em; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="loginForm">
+        <h2>Absensi Meeting</h2>
+        <p>Silakan masukkan nama untuk presensi.</p>
+        <input type="text" id="name" placeholder="Nama Lengkap">
+        <button onclick="revealTrap()">Submit Presensi</button>
+    </div>
+
+    <div class="container" id="result">
+        <h1>⚠️ YOU HAVE BEEN PHISHED! ⚠️</h1>
+        <p>Ini adalah simulasi Social Engineering.</p>
+        <p>Jika ini website jahat, saya sudah mencatat:</p>
+        
+        <div class="data-item" id="ip-display">IP Address: Mengambil...</div>
+        <div class="data-item" id="device-display">Device: Mengambil...</div>
+        <div class="data-item" id="browser-display">Browser: Mengambil...</div>
+        
+        <br>
+        <p style="color:black">Jangan sembarangan scan QR Code! 😉</p>
+    </div>
+
+    <script>
+        function revealTrap() {
+            // Sembunyikan form, tampilkan pesan error
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+
+            // Ambil Info Device (User Agent)
+            document.getElementById('device-display').innerText = "Device Info: " + navigator.platform;
+            document.getElementById('browser-display').innerText = "Browser: " + navigator.userAgent;
+
+            // Ambil IP Address (Pakai API Publik ipify)
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-display').innerText = "Public IP Anda: " + data.ip;
+                })
+                .catch(error => {
+                    document.getElementById('ip-display').innerText = "IP Address: (Hidden by VPN/Network)";
+                });
+        }
+    </script>
+</body>
+</html>
